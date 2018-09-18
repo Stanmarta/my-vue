@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1,minimal-ui" name="viewport">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic|Material+Icons">
+    <link rel="stylesheet" href="https://unpkg.com/vue-material@beta/dist/vue-material.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/vue-material@beta/dist/theme/default.css">
+    <title>my-vue</title>
+  </head>
+  <body>
+    <div id="app">
+      {{ message }}
+    </div>
+    <div id="app-2">
+      <span v-if="seen">Now you see me</span>
+    </div>
+    <!-- built files will be auto injected -->
+
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/vue-material@beta"></script>
+    <script>
+      Vue.use(VueMaterial.default)
+
+      new Vue({
+        el: '#app',
+        data: {
+          message: 'Hello Vue!'
+        }
+      })
+
+      var app3 = new Vue({
+        el: '#app-2',
+        data: {
+          seen: false
+        }
+      })
+    </script>
+  </body>
+</html>
